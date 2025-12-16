@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Forms พื้นฐานใน HTML</title>
+   
 </head>
 <body>
     <!-- ตัวอย่างการใช้ input เเละ form -->
@@ -60,6 +61,118 @@
         <!-- ปุ่มส่งฟอร์ม -->
         <button type="submit">ส่งข้อมูล</button>
     </form>
+
+     <table border="1" align="center" width="50%" heigth="10%" cellpadding="5" cellsaacing="0" bgclor="#">
+        <caption>ตารางสรุปข้อมูลหนักศึกศา</caption>
+        <tr align="center">
+            <th rowspan="2">ลำดับ</th>
+            <th colspan="2">ข้อมูลส่วนตัว</th>
+            <th rowspan="2">คะเเนนรวม</th>
+        </tr>
+        <tr align="center">
+            <th>ชื่อ</th>
+            <th>อายุ</th>
+        </tr>
+        <tr align="center">
+            <td align="center">1</td>
+            <td>สมชาย</td>
+            <td>20</td>
+            <td>85</td>
+        </tr>
+        <tr align="center">
+            <td>2</td>
+            <td>สมหญิง</td>
+            <td>22</td>
+            <td>60</td>
+        </tr>
+    </table>
+
+    <table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <td>A1</td>
+        <td>B1</td>
+        <td>C1</td>
+    </tr>
+    <tr>
+        <td>A2</td>
+        <td>B2</td>
+        <td>C2</td>
+    </tr>
+    <tr>
+        <td>A3</td>
+        <td>B3</td>
+        <td>C3</td>
+    </tr>
+</table>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ตัวอย่างตาราง HTML แบบเก่า</title>
+</head>
+<body>
+
+    <!-- การใช้ Attribute ทั้งหมดตามที่ระบุในรูป -->
+    <!-- หมายเหตุ: bgcolor เป็นรูปแบบเก่า และควรใช้ CSS แทน -->
+    <table 
+        border="1" 
+        width="80%" 
+        cellpadding="10" 
+        cellspacing="0" 
+        align="center" 
+        bgcolor="lightblue" 
+        summary="ตารางข้อมูลนักศึกษา">
+        
+        <caption>ตารางสรุปข้อมูล</caption>
+        
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>ความหมาย</th>
+                <th>ตัวอย่าง</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>border</td>
+                <td>เส้นขอบของตาราง</td>
+                <td>border="1"</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>ความกว้างของตาราง</td>
+                <td>width="80%"</td>
+            </tr>
+            <tr>
+                <td>cellpadding</td>
+                <td>ระยะห่างขอบเซลล์กับข้อความ</td>
+                <td>cellpadding="10"</td>
+            </tr>
+            <tr>
+                <td>cellspacing</td>
+                <td>ระยะห่างระหว่างเซลล์</td>
+                <td>cellspacing="0"</td>
+            </tr>
+            <tr>
+                <td>align</td>
+                <td>จัดตำแหน่งตาราง</td>
+                <td>align="center"</td>
+            </tr>
+            <tr>
+                <td>bgcolor</td>
+                <td>สีพื้นหลัง (เก่า)</td>
+                <td>bgcolor="lightblue"</td>
+            </tr>
+            <tr>
+                <td>summary</td>
+                <td>สรุปคำอธิบายตาราง (เพื่อ Accessibility)</td>
+                <td>summary="ตารางข้อมูล..."</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
 
 </body>
 </html>
