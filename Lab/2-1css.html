@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: green;
+        }
+
+        .highlight {
+            background:  yellow;
+        }
+
+        #heade {
+            background: blue;
+            color: white;
+            padding: 10px;
+        }
+
+        p:hover {
+            color: red;
+            background-color: #ffe5e5;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        
+        body {
+            font-family: serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #p1 {
+            font-family: Arial, sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 20px;
+            color: black;
+        }
+
+        #p2 {
+            font-family: Georgia, serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            color: black;
+        }
+
+        #p3 {
+            font-family: Georgia, serif;
+            font-style: oblique;
+            font-weight: 600;
+            font-size: 22px;
+            color: red;
+        }
+
+        #h1{
+            font-size: 40px;
+            text-shadow:  5px 5px 5px #ff0000;
+        }
+
+        .p5 {
+            width: 300px;
+            border: 10px solid #ccc;
+            padding: 10px;
+            word-wrap: break-word;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .line-through {
+            text-decoration: line-through;
+        }
+        .none {
+            text-decoration: none;
+        }
+
+        .line-height-normal {
+            line-height: 1.5;
+        }
+
+        .line-height-normal {
+            line-height: 24px;
+        }
+
+        .box-color{
+            width: 300px;
+            height: 120px;
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        .box-image  {
+            width: 300px;
+            height: 300px;
+            background-image: url(../img/ahri-crystal-rose-skin-lol-wild-rift-splash-art-2k-wallpaper-uhdpaper.com-1@5@h.jpg);
+            background-repeat:  no-repeat;
+            background-position:  center;
+            border: 2px solid #333;
+        }
+        
+        .box-short{
+            width: 300px;
+            height: 300px;
+            background: url(../img/ahri-crystal-rose-skin-lol-wild-rift-splash-art-2k-wallpaper-uhdpaper.com-1@5@h.jpg) no-repeat center;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>ตัวอย่าง css Selectors</h1>
+
+    <p>
+        ขอความนี้ถูกจัดสีด้วย Element Selector (p { color: green; })
+    </p>
+
+    <p class="highlight">
+        ข้อมความนี้ถูกจัดสไตล์ด้วย Class Selector (.highlight)
+    </p>
+
+    <div id="heade">
+        รี่คือพื้นที่ Header (ID Selector)
+    </div>
+
+    <br>
+    <hr>
+
+    <h2>Pseudo-class : hover</h2>
+    <p>นำเมาส์มาวางบนข้อมความนี้เพื่อดูเอฟเฟกต์</p><br>
+
+    <h2>Attribute Selector [type="text"]</h2>
+    <input type="text" placeholder="พิมพ์ข้อความที่นี่">
+
+    <br>
+
+    <p id="p1">Sans-serif(font-family: Arial; style: italic; weight: 400; size:20px; color: black)</p>
+    <br>
+    <p id="p2">Serif(font-family: Georgia; style: normal; weight: 600; size: 22px; color: black)</p>
+    <br>    
+    <p id="p3">Serif (Red)(font-family: Georgia; style: oblique; weight: 600; size: 22px; color: red)</p>
+
+    <hr>
+
+    <h1 id="h1">Text-shadow effect</h1>
+    <p class="p5">This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties. The paragraph is indented, aligned, and the space between characters is specified. ThisIsAVery Long Word That Would NormallyGGoOutside ButBreak Word KeepsItInside</p>
+    <br><hr>
+
+    <h2>Text Properties - Example</h2>
+    <h2>1. การจัดแนวข้อความ (text-align)</h2>
+
+    <p class="align-left">ข้อความนี้จัดชิดซ้าย (left)</p>
+    <p class="align-center">ข้อความนี้จัดกึ่งกลาง (center)</p>
+    <p class="align-right">ข้อความนี้จัดชิดขวา (right)</p>
+
+    <p>ข้อความนี้จัดเต็มบรรทัด (justify) เพื่อให้ชิดทั้งซ้ายและขวาโดยอัตโนมัติ</p>
+
+    <h2>2. การตกแต่งข้อความ (text-decoration)</h2>
+
+    <p class="underline">ข้อความนี้ขีดเส้นใต้ (underline)</p><br>
+    <p class="line-through">ข้อความนี้ขีดฆ่า (line-through)</p><br>
+    <p class="none">ข้อความนี้ไม่มีการตกแต่ง (none)</p><br>
+
+    <h2>3. การกำหนดระยะบรรทัด (line-height)</h2>
+
+    <p class="line-height-normal">ระยะบรรทัด 1.5 เท่า - เหมาะสำหรับการอ่านแบบสบายตาในบทความทั่วไป</p>
+    <p class="line-height-normal">ระยะบรรทัด 24px – ควบคุมความสูงบรรทัดแบบคงที่</p><br>
+
+    <hr>
+
+    <table class="box-color"></table>
+</body>
+</html>

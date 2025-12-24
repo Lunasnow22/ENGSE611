@@ -1,0 +1,119 @@
+/* 3. Element Selector: ตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6; /* สีพื้นหลังเทาอ่อนดูสะอาดตา */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* 5. ID Selector: ตกแต่งส่วนหัว */
+#main-header {
+    background-color: #2c3e50; /* สีน้ำเงินเข้มแบบโปร */
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* 4. Class Selector: เน้นข้อความ */
+.highlight {
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* ตกแต่ง Navigation */
+nav {
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* จัดการ Layout ของ Main */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* ตกแต่งรูปภาพ */
+.profile-img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    border: 5px solid #eee;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 6. ตกแต่งตารางและ Form (Property อื่นๆ) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+/* ตกแต่ง Form */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* ทำให้ padding ไม่ล้น */
+}
+
+button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #219150;
+}
+
+.social-links a {
+    display: inline-block;
+    background: #eee;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-right: 10px;
+    color: #333;
+}
