@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid #0077ff;
+  margin: 20px;
+  background-color: #cce5ff;
+}
+
+/* ตัวอย่างแบบปกติ (content-box) */
+.content-box {
+  box-sizing: content-box;
+}
+
+/* ตัวอย่างแบบ border-box */
+.border-box {
+  box-sizing: border-box;
+  background-color: #ffd8cc;
+}
+
+.box-shadow-example{
+    box-shadow: 10px 10px 10px #888888;
+    border-style: dotted;
+}
+
+.box-shadow-example1{
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.4);
+    
+}
+.box-shadow-example2{
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.box-shadow-example3{
+    box-shadow: 0 12px 8px rgba(0,0,0,0.25);
+}
+.box-shadow-example4{
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.4);
+}
+.box-shadow-example5{
+    box-shadow: multi-layer;
+}
+
+.block-example-div{
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #c8e6ff;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>CSS Box Model</h2>
+
+<h3>1) box-sizing: content-box (ค่าปกติ)</h3>
+<div class="box-shadow-example">
+  ความกว้างที่กำหนด = 200px  
+  (ไม่รวม padding + border)
+</div>
+
+<h3 >2) box-sizing: border-box</h3>
+<div class="box-shadow-example2">
+  ความกว้างที่กำหนด = 200px  
+  (รวม padding + border อยู่ใน 200px)
+</div>
+
+<h3 >3) box-sizing: border-box</h3>
+<div class="box-shadow-example3">
+  ความกว้างที่กำหนด = 200px  
+  (รวม padding + border อยู่ใน 200px)
+</div>
+
+<h3 >4) box-sizing: border-box</h3>
+<div class="box-shadow-example4">
+  ความกว้างที่กำหนด = 200px  
+  (รวม padding + border อยู่ใน 200px)
+</div>
+
+<h3 >5) box-sizing: border-box</h3>
+<div class="box-shadow-example5">
+  ความกว้างที่กำหนด = 200px  
+  (รวม padding + border อยู่ใน 200px)
+</div>
+
+<h1>display: block;</h1>
+
+<p>กินพื้นที่เต็มบรรทัด เเละขึ้นบรรทัดใหม่เสมอ</p>
+
+<div class="block-example-div">Block</div>
+
+
+</body>
+</html>

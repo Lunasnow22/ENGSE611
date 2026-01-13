@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 70px; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: -20px;
+    overflow: visible; 
+    margin-bottom: 5px;
+}
+
+.logo img {
+    width: 200px; 
+    height: auto;
+    object-fit: contain;
+    object-position: left;
+    display: block;
+    padding: 0;
+}
+
+.sidebar h2 {
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #010a13;
+    color: #f0e6d2;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #091428;
+    padding: 30px;
+    border-right: 2px solid #c8aa6e;
+}
+
+.sidebar h2 {
+    color: #c8aa6e;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.sidebar ul li a {
+    color: #a09b8c;
+    text-decoration: none;
+    display: block;
+    padding: 12px 0;
+    transition: 0.3s;
+    border-bottom: 1px solid rgba(200, 170, 110, 0.1);
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    color: #f0e6d2;
+    padding-left: 10px;
+    border-left: 3px solid #c8aa6e;
+}
+
+.content {
+    background: linear-gradient(to bottom, #0a1428, #010a13);
+    padding: 40px;
+}
+
+.content-header h1 {
+    font-size: 2.5rem;
+    color: #c8aa6e;
+    margin-bottom: 10px;
+}
+
+.champion-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.champion-card {
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #5b5a56;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.champion-card:hover {
+    border-color: #c8aa6e;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.champion-card img {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.champion-card .info {
+    padding: 20px;
+}
+
+.champion-card h3 {
+    margin: 0 0 10px 0;
+    color: #00bee8;
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 100%;
+    }
+    
+    .sidebar {
+        border-right: none;
+        border-bottom: 2px solid #c8aa6e;
+    }
+
+    .champion-card {
+        flex-direction: column;
+    }
+
+    .champion-card img {
+        width: 100%;
+        height: 150px;
+    }
+}

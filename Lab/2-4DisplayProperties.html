@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.block-example-div{
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #c8e6ff;
+}
+
+.inline-example-span{
+    display: inline;
+    padding: 5px;
+    background: #ffc8c8;
+    margin-right: 5px;
+}
+
+.inline-block-example-div{
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    background: #d2ffd2;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #4caf50;
+}
+
+.box{
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #a0d8ff;
+    border: 2px solid #0077aa;
+    font-size: 20px;
+}
+
+.none{
+    display: none;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+</style>
+<body>
+    <h1>display: block;</h1>
+
+    <p>กินพื้นที่เต็มบรรทัด เเละขึ้นบรรทัดใหม่เสมอ</p>
+
+    <div class="block-example-div">Block 1</div>
+    <div class="block-example-div">Block 2</div>
+    <hr>
+
+    <h1>display: inline;</h1>
+    <p>อยู่ในบรรทัดเดียวกัน เเละไม่สามารถกำหนด width/heigt ได้</p>
+
+    <div>
+        <p class="inline-example-span">Lnline 1</p>
+        <div class="inline-example-span">
+            Lnline 2 Lnline 2
+        </div>
+        <p class="inline-example-span">Lnline 3</p>
+    </div>
+    <hr>
+
+    <h1>display: inline-block;</h1>
+    <p>รวมข้อดีของ inline และ block → ไม่ขึ้นบรรทัดใหม่ + กำาหนด width/height ได้</p>
+
+    <div>
+        <p class="inline-block-example-div">Box A</p>
+        <p class="inline-block-example-div">Box B Box B</p>
+        <p class="inline-block-example-div">Box C</p>
+    </div>
+    <hr>
+
+    <h2>แสดงผลปกติ</h2>
+
+    <div class="box">Box 1 (ปกติ)</div>
+
+    <h2>display: none; + หายไปจากหน้าเว็บ</h2>
+
+    <div class="box none">Box 2 (display:none หายไป)</div>
+
+    <div class="box">Box 3 (จะชิตขึ้นมาทันทีเพราะ Box 2 หายไป)</div>
+
+    <h2>visibility: hidden; ซ่อน แต่ยังคงพื้นที่</h2>
+
+    <div class="box hidden">Box 4 (visibility:hidden ซ่อนแต่ยังคงขนาด) </div>
+
+    <div class="box">Box 5 (ไม่ขยับขึ้น เพราะ Box 4 ยังมีพื้นที่อยู่)</div>
+</body>
+</html>
