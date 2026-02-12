@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        background: #e9edf2;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .item{
+        background: #0f2557;
+        color: #ffffff;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    @media(min-width: 768px){
+        .grid-container{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+    @media(min-width: 1024px){
+        .grid-container{
+            grid-template-columns: repeat(4, 1fr);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+</style>
+<body>
+    <h1>Grid Responsive</h1>
+
+    <div class="grid-container">
+        <div class="item"><p>Item 1</p></div>
+        <div class="item"><p>Item 2</p></div>
+        <div class="item"><p>Item 3</p></div>
+        <div class="item"><p>Item 4</p></div>
+        <div class="item"><p>Item 5</p></div>          
+        <div class="item"><p>Item 6</p></div>          
+        <div class="item"><p>Item 7</p></div>          
+        <div class="item"><p>Item 8</p></div>          
+</body>
+</html>

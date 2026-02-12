@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hextech Grade Evaluator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Beaufort+for+LoL:wght@700&family=Spiegel:wght@400;700&display=swap');
+
+        body {
+            background-color: #010a13;
+            color: #f0e6d2;
+            font-family: 'Spiegel', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: radial-gradient(circle, #051923 0%, #010a13 100%);
+        }
+
+        .hextech-card {
+            background: rgba(1, 10, 19, 0.9);
+            border: 2px solid #785a28;
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(120, 90, 40, 0.3);
+            position: relative;
+        }
+
+        .hextech-card::before {
+            content: "";
+            position: absolute;
+            top: -5px; left: -5px; right: -5px; bottom: -5px;
+            border: 1px solid #c8aa6e;
+            pointer-events: none;
+        }
+
+        h1 {
+            font-family: 'Beaufort for LoL', serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #c8aa6e;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #785a28;
+            padding-bottom: 10px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        input {
+            background: #010a13;
+            border: 1px solid #785a28;
+            color: #f0e6d2;
+            padding: 10px;
+            font-size: 1.2rem;
+            width: 80%;
+            text-align: center;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #c8aa6e;
+            box-shadow: 0 0 10px rgba(200, 170, 110, 0.2);
+        }
+
+        button {
+            background: #1e2328;
+            color: #cdbe91;
+            border: 1px solid #785a28;
+            padding: 12px 30px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            background: #cdbe91;
+            color: #1e2328;
+            box-shadow: 0 0 15px rgba(205, 190, 145, 0.4);
+        }
+
+        #output {
+            margin-top: 30px;
+            padding: 20px;
+            border-top: 1px solid #32281e;
+            min-height: 100px;
+        }
+
+        .result-item {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .grade-value {
+            font-size: 2.5rem;
+            color: #00bcda;
+            font-family: 'Beaufort for LoL', serif;
+            display: block;
+            text-shadow: 0 0 10px rgba(0, 188, 218, 0.5);
+        }
+
+        .status-pass { color: #0ac8b9; }
+        .status-fail { color: #ef3f23; }
+    </style>
+</head>
+<body>
+
+    <div class="hextech-card">
+        <h1>Grade Check</h1>
+        <div class="input-group">
+            <input type="number" id="scoreInput" placeholder="Enter Score (0-100)">
+        </div>
+        <button onclick="checkGrade()">Run Code</button>
+
+        <div id="output">
+            </div>
+    </div>
+
+    <script src="JavaScript/JavaScript.js"></script>
+</body>
+</html>

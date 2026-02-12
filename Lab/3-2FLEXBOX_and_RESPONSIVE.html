@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        background: #e9edf2;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .item{
+        background: #0f2557;
+        color: #ffffff;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+
+    @media(min-width: 768px){
+        .flex-container{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .item{
+            flex: 1 1 45%;
+        }
+    }
+    @media(min-width: 1024px){
+        .flex-container{
+            flex-wrap: nowrap;
+        }
+        .item{
+            flex: 1 1 30%;
+        }
+    }
+</style>
+<body>
+    <h1 align="center">Flexbox กับ Responsive</h1>
+    <div class="flex-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+</body>
+</html>

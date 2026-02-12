@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outputBox">ผลลัพธ์จะเเสองที่นี่....</div>
+    <button onclick="runDemo()">Run Demo</button>
+    <script>
+        function runDemo(){
+            const output = [];
+
+            let score = 75;
+
+            if(score >= 50){
+                output.push("ผลสอบ: ผ่าน");
+                console.log("ผลสอบ: ผ่าน");
+            } else {
+                output.push("ผลสอบ: ไม่ผ่าน");
+                console.log("ผลสอบ: ไม่ผ่าน");
+            }
+
+            for(let i = 1; i <= 5; i++){
+                output.push("รอบที่ " + i);
+                console.log("รอบที่ ", i);
+            }
+
+            document.getElementById("outputBox").textContent = output.join('\n');
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="runDemo()">Run Code</button>
+
+    <p id = "outputBox" style="box-sizing: border-box; padding: 10px; border: 1px solid #ccc;"></p>
+
+    <script>
+        function runDemo(){
+            console.clear();
+            const output = [];
+
+            let StudentName = 'สมชาย';
+            let age = 20;
+            let isStudent = true;
+            const universityName = 'มหาวิทยาลัยตัวอย่าง';
+
+            output.push("ชื่อ: " + StudentName);
+            console.log("ชื่อมหาลับ: " , StudentName);
+            output.push("อายุ: " + age);
+            console.log("อายุ: " , age);
+
+            age = 21;
+            output.push("อายุที่อัพเดต: " + age);
+            console.log("อายุที่อัพเดต: " , age);
+
+            try {
+                universityName = 'มหาวิทยาลัยใหม่';
+            } catch (e) {
+                output.push("ข้อผิดพลาด: ไม่สามารถเปลี่ยนแปลงค่าคงที่ได้" + e.message);
+                console.error("ข้อผิดพลาด: ", e.message);
+            }
+
+            document.getElementById("outputBox").innerHTML = output.join('<br>');
+
+            let aString = "สวัดดี";
+            console.log("ชนิดข้อมูลของ aString: ", typeof aString);
+
+            let aNumber = 99.5;
+            console.log("ชนิดข้อมูลของ aNumber: ", typeof aNumber);
+
+            let aBoolean = true;
+            console.log("ชนิดข้อมูลของ aBoolean: ", typeof aBoolean);
+
+            let anUnderfind;
+            console.log("ชนิดข้อมูลของ anUnderfind: ", typeof anUnderfind);
+
+            let aNull = null;
+            console.log("ชนิดข้อมูลของ aNull: ", typeof aNull);
+
+            let text = 'JavaSpript';
+            let firsName = 'สมชาย';
+            console.log(`ยินดีต้อนรับสู่ ${firsName}!`);
+        }
+    </script>
+</body>
+</html>

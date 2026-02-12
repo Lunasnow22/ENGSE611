@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="output" style="box-sizing: border-box; padding: 10px; background-color: #f0f0f0;">ผลลัพธ์จะเเสองที่นี่....</pre>
+    <button onclick="runStringDemo()">Run String Demo</button>
+    <script>
+        function runStringDemo(){
+            const out = [];
+
+            let text = 'JavaScript เจ่งมาก';
+            let firsName = 'สมชาย';
+
+            out.push(`สวัดดีครับ ${firsName}`);
+            console.log(`สวัดดีครับ ${firsName}`);
+
+            out.push("ความยาวของข้อความ: " + text.length);
+            console.log("ความยาวของข้อความ: " , text.length);
+
+            out.push("ตัวใหญา่: " + text.toUpperCase());
+            console.log("ตัวใหญา่: " , text.toUpperCase());
+
+            out.push("ตัวเล็ก: " + text.toLowerCase());
+            console.log("ตัวเล็ก: " , text.toLowerCase());
+
+            out.push('มี "๋Java"? ' + text.includes("๋Java"));
+            console.log('มี "๋Java"? ' , text.includes("๋Java"));
+
+            out.push('ตำแหน่งของ "Script": ' + text.indexOf("Script"));
+            console.log('ตำแหน่งของ "Script": ' , text.indexOf("Script"));
+
+            out.push('ตัดคำ (0-4): ' + text.slice(0,4));
+            console.log('ตัดคำ (0-4): ' , text.slice(0,4));
+
+            out.push('แทนที่": ' + text.replace("เจ่ง", "สุดยอด"));
+            console.log('แทนที่": ' , text.replace("เจ่ง", "สุดยอด"));
+
+            document.getElementById("output").innerHTML = out.join('\n');
+
+            console.clear();
+            out.forEach(line => console.log("> " +line));
+            
+        }
+    </script>
+</body>
+</html>

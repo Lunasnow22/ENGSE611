@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hextech Loop Core</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Beaufort+for+LoL:wght@700&family=Spiegel:wght@400;700&display=swap');
+
+        body {
+            background-color: #010a13;
+            color: #f0e6d2;
+            font-family: 'Spiegel', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: radial-gradient(circle, #051923 0%, #010a13 100%);
+        }
+
+        .loop-card {
+            background: rgba(1, 10, 19, 0.95);
+            border: 2px solid #785a28;
+            padding: 30px;
+            width: 450px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+
+        .loop-card::after {
+            content: "";
+            position: absolute;
+            top: 2px; left: 2px; right: 2px; bottom: 2px;
+            border: 1px solid #c8aa6e;
+            pointer-events: none;
+        }
+
+        h1 {
+            font-family: 'Beaufort for LoL', serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #c8aa6e;
+            text-align: center;
+            margin-top: 0;
+            border-bottom: 1px solid #32281e;
+            padding-bottom: 15px;
+        }
+
+        .btn-hextech {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 20px;
+            background: #1e2328;
+            color: #cdbe91;
+            border: 1px solid #785a28;
+            padding: 10px 25px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-hextech:hover {
+            background: #cdbe91;
+            color: #1e2328;
+            box-shadow: 0 0 15px rgba(205, 190, 145, 0.3);
+        }
+
+        #terminalOutput {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid #32281e;
+            height: 400px;
+            overflow-y: auto;
+            padding: 15px;
+            font-family: monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #a09b8c;
+            scrollbar-width: thin;
+            scrollbar-color: #785a28 #010a13;
+        }
+
+        #terminalOutput::-webkit-scrollbar { width: 6px; }
+        #terminalOutput::-webkit-scrollbar-track { background: #010a13; }
+        #terminalOutput::-webkit-scrollbar-thumb { background: #785a28; }
+
+        .cyan-text { color: #00bcda; }
+        .gold-text { color: #c8aa6e; }
+        .divider { border-bottom: 1px dashed #32281e; margin: 10px 0; }
+    </style>
+</head>
+<body>
+
+    <div class="loop-card">
+        <h1>Loop Processor</h1>
+        <button class="btn-hextech" onclick="executeLoop()">Run Code</button>
+        <div id="terminalOutput">
+            > System Ready...<br>
+            > Click "Run Code" to start iteration.
+        </div>
+    </div>
+
+    <script src="JavaScript/JavaScript.js"></script>
+</body>
+</html>
